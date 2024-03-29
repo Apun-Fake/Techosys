@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecosys</title>
+    <link rel="icon" href="img/your-logo.png" type="image/x-icon">
+    <style>
+                
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+body {
+	background: #FFF;
+	font-family: 'Open Sans', sans-serif;
+}
+
+        .topnav {
+            background-color: black;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            /* Aligns items with space between them */
+            align-items: center;
+            /* Vertically center items */
+            padding: 0 20px;
+            width: 100%;
+            /* Ensure the navigation bar spans the full width */
+        }
+
+        .topnav a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: inline-block;
+        }
+
+        .topnav a:hover {
+            background-color: #555;
+        }
+
+        .topnav a.active {
+            border-bottom: 2px solid white;
+            /* Add a bottom border to indicate the active link */
+        }
+
+        .section {
+            text-align: center;
+            color: white;
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            font-size: 42px;
+            font-weight: bold;
+        }
+
+        .topnav-logo {
+            display: flex;
+            align-items: center;
+            /* Vertically center items */
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            /* Adjust size as needed */
+        }
+
+        .topnav-logo img {
+            height: 40px;
+            /* Adjust height as needed */
+        }
+
+        .topnav-logo span {
+            font-weight: bold;
+            margin-left: 10px;
+            /* Adjust spacing between the logo and text */
+        }
+
+        .cerina-section {
+            text-align: center;
+            padding: 50px 20px;
+            width: 100%;
+            /* Adjust width as needed */
+           // background-image: url('img/background.png');
+            /* Replace 'your-image-url.jpg' with the URL of your image */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .cerina-section .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            /* Adjust text color to ensure readability */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            /* Optional: Add shadow for better contrast */
+        }
+
+        .cerina-section a {
+            display: inline-block;
+            text-align: center;
+            margin-top: 20px;
+            /* Adjust spacing between the title and link */
+            padding: 10px 20px;
+            background-color: blue;
+            /* Change background color as needed */
+            color: white;
+            /* Change text color as needed */
+            text-decoration: none;
+            border-radius: 5px;
+            /* Optional: Add border radius for a rounded look */
+        }
+
+        /*TEAM SECTION*/
+        .totalcard {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+
+        .totalcard .card {
+            margin: 50px;
+            width: 300px;
+            border-radius: 10px;
+            background: #fff;
+        }
+
+        .totalcard .card {
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4),
+                0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .card:nth-child(1) {
+            border-top: 5px solid green;
+        }
+
+        .card:nth-child(2) {
+            border-top: 5px solid blue;
+        }
+
+        /*
+.card:nth-child(3){
+	border-top: 5px solid green;
+}
+.card:nth-child(4){
+	border-top: 5px solid green;
+}*/
+        .card:nth-child(1):hover {
+            box-shadow: inset 0px 0px 10px rgba(0, 255, 0, 0.5),
+                1px 1px 30px rgba(0, 255, 0, 0.5);
+        }
+
+        .card:nth-child(2):hover {
+            box-shadow: inset 0px 0px 10px rgba(0, 0, 255, 0.5),
+                1px 1px 30px rgba(0, 0, 255, 0.5);
+        }
+
+        /*
+.card:nth-child(3):hover {
+	box-shadow: inset 0px 0px 10px rgba(0,255,0,0.5),
+				1px 1px 30px rgba(0,255,0,0.5);
+}
+.card:nth-child(4):hover {
+	box-shadow: inset 0px 0px 10px rgba(0,0,255,0.5),
+				1px 1px 30px rgba(0,0,255,0.5);
+}*/
+        .totalcard .card img {
+            width: 100px;
+            height: 100px;
+            margin-top: 5px;
+            cursor: pointer;
+            border-radius: 50px;
+            transition-duration: .8s;
+        }
+
+        .totalcard .card img:hover {
+            transform: scale(3.5);
+            border-radius: 0;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        #detail {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+        #detail p {
+            font-size: 15px;
+            line-height: 25px;
+            font-variant: small-caps;
+            text-align: center;
+            margin: 25px;
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+
+        #detail button {
+            margin-right: 85px;
+            outline: none;
+            border-radius: 10px;
+            border-style: none;
+            border: 1px solid black;
+            padding: 9px 25px;
+            cursor: pointer;
+            transition-duration: .4s;
+        }
+
+        #detail a {
+            bottom: 80px;
+            text-decoration: none;
+            margin-bottom: 30px;
+            margin-top: 20px;
+            margin-left: 90px;
+            align-self: center;
+        }
+
+        .btn-roshan:hover {
+            background: rgba(0, 255, 0, 0.7);
+            color: #fff;
+        }
+
+        .btn-roshan2:hover {
+            background: rgba(0, 0, 255, 0.5);
+            color: #fff;
+        }
+
+        .card-title {
+            font-size: 17px;
+            color: #343A40;
+            padding: 20px;
+            font-weight: 700;
+        }
+
+        /*Common things in all sections*/
+        #team_section {
+            font-family: 'Open Sans', sans-serif;
+            color: #2E3D49;
+            position: relative;
+        }
+
+        .diffSection {
+            width: 100%;
+            /*position: relative;*/
+            justify-content: center;
+            align-items: center;
+        }
+
+        .diffSection .content {
+            margin: 10px;
+            text-align: center;
+            padding: 10px 100px;
+            font-size: 1.1em;
+        }
+/*SCROLLING TEXT*/
+.marqu {
+	text-align: center;
+	justify-content: center;
+	color: #fff;
+	font-size: 20px;
+	padding: 10px;
+}
+/*FOOTER*/
+footer {
+	color: #E5E8EF;
+	background: #000D;
+	padding: 50px 0; 
+}
+footer .footer-container {
+	max-width: 1300px;
+	margin: auto;
+	padding: 0 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap-reverse;
+}
+footer .social-media img{
+	width: 22px;
+}
+footer .logo {
+	width: 180px;
+	color: #fff;
+}
+footer .social-media a{
+	margin-right: 10px;
+	font-size: 22px;
+	text-decoration: none;
+}
+footer .right-col h1{
+	font-size: 26px;
+}
+footer .border{
+	width: 100px;
+	height: 4px;
+	background: linear-gradient(to right, #FA4B37, #DF2771);
+	margin: 2px;
+}
+footer .newsletter-form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+footer input::placeholder {
+  color: white !important;
+}
+footer .txtb {
+	flex: 1;
+	padding: 18px 40px;
+	font-size: 16px;
+	background: #343A40;
+	border: none;
+	font-weight: 700;
+	outline: none;
+	border-radius: 5px;
+	min-width: 260px;
+	margin-top: 20px;
+	color: white;
+}
+footer .btn {
+	margin-top: 20px;
+	padding: 18px 40px;
+	font-size: 16px;
+	color: #f1f1f1;
+	background: linear-gradient(to right, #FA4B37, #DF2771);
+	border: none;
+	font-weight: 700;
+	outline: none;
+	border-radius: 5px;
+	margin-left: 20px;
+	cursor: pointer;
+	transition: opacity .3s linear;	
+}
+footer .btn:hover {
+	opacity: .7;
+}
+
+.whatsapp-button {
+    display: inline-block;
+    background-image: linear-gradient(to right, #00BFA5, #1DE9B6); /* Green gradient */
+    color: white; /* Text color */
+    padding: 10px 25px; /* Adjust padding as needed */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline from links */
+    font-weight: bold; /* Make the text bold */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+}
+
+.whatsapp-button:hover, .whatsapp-button:focus {
+    background-image: linear-gradient(to right, #1DE9B6, #00BFA5); /* Slightly change gradient on hover/focus */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    text-decoration: none; /* Ensure no underline on hover */
+    color: white; /* Maintain text color on hover */
+}
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 10%;
+    min-height: 10%;
+    z-index: -1; /* Ensure the video stays behind other content */
+}
+
+    </style>
+
+</head>
+
+<body>
+
+
+
+
+<video autoplay muted loop class="background-video">
+        <source src="vdo/home_video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="topnav">
+        <div class="topnav-logo">
+            <img src="img/your-logo.png" alt="Logo" height="40"> <!-- Adjust height as needed -->
+            <span>Techosys</span>
+        </div>
+
+        <div class="topnav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="contact.html">Contact</a>
+            <a href="#documentation">Documentation</a>
+            <a href="#services">Services</a>
+            <a href="#pricing">Pricing</a>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">DISCOVER THE FUTURE OF AI <hr></div>
+    </div>
+
+    <div class="cerina-section">
+        <div class="section-title">Explore the Cerina AI</div>
+        <a href="https://cerina.tecosys.in">Go to Cerina</a>
+    </div>
+
+
+
+    <!-- Founders -->
+    <div class="diffSection" id="team_section">
+        <center>
+            <p style="font-size: 50px; padding-top: 100px; padding-bottom: 60px; color: white;">We're the Creators</p>
+        </center>
+        <center>
+            
+<p style="font-size: 30px; padding-top: 10px; padding-bottom: 10px; background-color: white; height: 50px; color: black;">Founders</p><hr>
+
+            
+        </center>
+        <div class="totalcard">
+            <div class="card">
+                <center><img src="img/avishek.jpg"></center>
+                <center>
+                    <div class="card-title">Avishek Bhattacharjee</div>
+                    <div id="detail">
+                        <p>“ AI can't replace any human because it doesn't have the mind to think and it can't be added in the future. Tecosys is committed to providing innovative solutions using AI that make human tasks easier. We are not replacing you, but we will surely replace the capacity of all existing AI. “</p>
+                        <div class="duty"></div>
+                        <a href="https://www.linkedin.com/in/wbavishek/" target="_blank"><button class="btn-roshan">Follow +</button></a>
+                    </div>
+                </center>
+            </div>
+            <div class="card">
+                <center><img src="img/haraprasad.jpg"></center>
+                <center>
+                    <div class="card-title">Haraprasad Hota</div>
+                    <div id="detail">
+                        <p>“ Life is too short to settle for mediocrity. Dare to dream big, take risks, and push yourself out of your comfort zone. At Tecosys, we believe in challenging the status quo and striving for excellence in everything we do. Let us inspire you to aim higher and reach for the stars. “</p>
+                        <div class="duty"></div>
+                        <a href="https://www.instagram.com/hk4crprasads/" target="_blank"><button class="btn-roshan">Follow +</button></a>
+                    </div>
+                </center>
+            </div>
+        </div>
+    </div>
+
+    <!-- Directors -->
+    <div class="diffSection" id="team_section">
+        <center>
+            
+<p style="font-size: 25px; padding-top: 10px; padding-bottom: 10px; background-color: white; height: 50px; color: black;">Directors</p><hr>
+            
+        </center>
+        <div class="totalcard">
+            <div class="card">
+                <center><img src="img/om.jpg"></center>
+                <center>
+                    <div class="card-title">Om Gawande</div>
+                    <div id="detail">
+                        <p>“ Success is not defined by how much you have, but by how much you give. At Tecosys, we believe in the importance of making a positive impact on the world around us. Let us inspire you to use your talents and resources to make a difference in the lives of others. Together, we can create a brighter future for all. “</p>
+                        <div class="duty"></div>
+                        <a href="https://www.linkedin.com/in/wbavishek/" target="_blank"><button class="btn-roshan">Follow +</button></a>
+                    </div>
+                </center>
+            </div>
+            <div class="card">
+                <center><img src="img/Mr.jpg"></center>
+                <center>
+                    <div class="card-title">Mr. Biswajit</div>
+                    <div id="detail">
+                        <p>“ Challenges are not obstacles; they are opportunities in disguise. Embrace them, learn from them, and use them to fuel your growth. With the right mindset and determination, you can overcome any obstacle and achieve greatness. Let Tecosys be your partner on this journey to success. “</p>
+                        <div class="duty"></div>
+                        <a href="https://www.instagram.com/smiley_victim/" target="_blank"><button class="btn-roshan">Follow +</button></a>
+                    </div>
+                </center>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- Sliding Information -->
+    <marquee style="background: linear-gradient(to right, #FA4B37, #DF2771); margin-top: 50px;" direction="left" onmouseover="this.stop()" onmouseout="this.start()" scrollamount="20">
+        <div class="marqu">“Education is the passport to the future, for tomorrow belongs to those who prepare for it today.” “Your attitude, not your aptitude, will determine your altitude.” “If you think education is expensive, try ignorance.” “The only person who is educated is the one who has Skillscare how to learn …and change.”</div>
+    </marquee>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="left-col">
+                <img src="img/your-logo.png" style="width: 200px;">
+                <div class="logo"></div>
+                <div class="social-media">
+                    <a href="https://facebook.com/skillscare"><img src="img/fb.png"></a>
+                    <a href="https://instagram.com/skillscarein"><img src="img/insta.png"></a>
+                    <a href="https://x.com/skillscarein"><img src="img/tt.png"></a>
+                    <a href="https://youtube.com/EducatorFoundation"><img src="img/ytube.png"></a>
+                    <a href="https://www.linkedin.com/company/skillscare/"><img src="img/linkedin.png"></a>
+                </div><br><br>
+                <p class="rights-text">Copyright © 2024 Created By Skillscare. All Rights Reserved.</p>
+                <p><img src="img/phone.png"> +91××××××××××<br><img src="img/mail.png">&nbsp; admin@tecosys.in</p>
+            </div>
+            <div class="right-col">
+                <h1 style="color: #fff">Our Newsletter</h1>
+                <div class="border"></div><br>
+                <p>Enter Your Email to get our News and updates.</p>
+                <form class="newsletter-form">
+                    <input class="txtb" type="email" placeholder="Enter Your Email">
+                    <input class="btn" type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
